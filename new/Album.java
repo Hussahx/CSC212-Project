@@ -8,7 +8,7 @@ public class Album {
         private InvIndexPhotoManager invman;
         private int NbComps;
 
-        // Constructor
+      
         public Album(String name, String condition, PhotoManager manager, InvIndexPhotoManager invmanager )
         {
             this.n = name;
@@ -62,14 +62,14 @@ public class Album {
                     while ( ! Rphotos.last())
                     {
                         Photo photo = Rphotos.retrieve();
-                        //System.out.println("test " + photo.getPath());
+                       
                         if ( ! allAvilable (photo.allTags , Array ))
                             Rphotos.remove();
                         else
                             Rphotos.findNext();
                     }
                     Photo photo11 = Rphotos.retrieve();
-                    //System.out.println("testlast " + photo11.getPath());
+                    
                     if ( ! allAvilable (photo11.allTags , Array ))
                         Rphotos.remove();
                     else
@@ -116,7 +116,6 @@ public class Album {
         }
 
         
-        // Return all photos with the album condition
         private LinkedList<Photo> getPhotosBST()
         {
             BST<LinkedList<Photo>> photosBST = invman.getPhotos();
@@ -149,7 +148,7 @@ public class Album {
                             Rphotos.insert(miniTag.retrieve());
                         }
                         else
-                            Rphotos  = Function ( Rphotos , photosBST.retrieve());
+                            Rphotos  = intersect ( Rphotos , photosBST.retrieve());
                     }
                     else
                     {
@@ -161,8 +160,9 @@ public class Album {
             return Rphotos;
         }
 
-        // Used when there is a condition 
-        private LinkedList<Photo> Function(LinkedList<Photo> list1, LinkedList<Photo> list2) 
+        
+        
+        private LinkedList<Photo> intersect(LinkedList<Photo> list1, LinkedList<Photo> list2) 
         {
             LinkedList<Photo> result = new LinkedList<Photo>();
             if (list1.empty()) {
@@ -187,6 +187,7 @@ public class Album {
 
             return result;
         }
+
         
         private boolean inList(Photo target, LinkedList<Photo> list) 
         {
