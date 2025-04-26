@@ -13,21 +13,7 @@ public class InvIndexPhotoManager {
         public void addPhoto(Photo p) {
             LinkedList<String> tags = p.getTags();
             
-          /*  if (!tags.empty()) {
-                tags.findFirst();
-                while (!tags.last()) {
-                    String tag = tags.retrieve();
-                    if (Inverted_Index.findkey(tag)) {
-                        LinkedList<Photo> photoList = Inverted_Index.retrieve();
-                        photoList.insert(p);
-                        Inverted_Index.update(tag, photoList);
-                    } else {
-                        LinkedList<Photo> photoList = new LinkedList<Photo>();
-                        photoList.insert(p);
-                        Inverted_Index.insert(tag, photoList);
-                    }
-                    tags.findNext();
-                }*/
+       
             if (!tags.empty()) {
                 tags.findFirst();
                 do {
