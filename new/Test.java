@@ -91,21 +91,8 @@ public class Test {
         }
         return result;
     }
-    /*
-     * private static void printLL(LinkedList<String> list){
-    list.findFirst();
-    if(list.empty()) 
-        return;
-    while(true)
-    {
-        System.out.print(list.retrieve() + " ");
-        if(list.last()) 
-            return;
-        list.findNext();
-    }
-}
-
-     */
+    
+     
     private static void printLL(LinkedList<String> list) {
         if (list.empty()) return;
 
@@ -118,20 +105,7 @@ public class Test {
         // Print the last item after the loop
         System.out.print(list.retrieve() + " ");
     }
-/*
- * private static void printLLPhoto(LinkedList<Photo> list){
-            list.findFirst();
-            if(list.empty()) 
-                return;
-            while(true)
-            {
-                System.out.println(list.retrieve().getPath());
-                if(list.last()) 
-                    return;
-                list.findNext();
-            }
-        }1
- */
+
     private static void printLLPhoto(LinkedList<Photo> list) {
         if (list.empty()) return;
 
