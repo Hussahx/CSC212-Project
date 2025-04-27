@@ -1,7 +1,10 @@
+import java.util.*;
+
 public class Test2 {
+    
     public static void main(String[] args) {
 
-      Scanner in = new Scanner(system.in);
+      Scanner in = new Scanner(System.in);
         InvIndexPhotoManager invmanager = new InvIndexPhotoManager();
         PhotoManager manager = new PhotoManager();
         
@@ -20,35 +23,60 @@ public class Test2 {
         Photo photo5 = new Photo("fox.jpg", toTagsLinkedList("animal, fox, tree, forest, grass"));
         invmanager.addPhoto(photo5);
         manager.addPhoto(photo5);
+        
+        Album album1 = new Album("Album1", "bear", manager, invmanager);
+        Album album2 = new Album("Album2", "animal AND grass", manager, invmanager);
+        Album album3 = new Album("Album3", "", manager, invmanager);
 
-      System.out.println("Chhose a class:")
-        string ch = in.nextInt();
+      System.out.println("Choose a class:");
+        String ch = in.next();
 
-switch(ch)
+switch(ch){
 
-    case album :
+    case "album" :
 
-
-
-    case manager:
-
-
-    case photo :
-
+        printLLPhoto(album1.getPhotos());
 
 
-    case photomanager:
+    case "manager":
+
+
+    case "photo" :
+
+
+
+    case "photomanager":
 
 
             
-    case invindexphotomanager:
+    case "invindexphotomanager":
 
             
-
+}
 
 
 
         
     }
-}
 
+    private static LinkedList<String> toTagsLinkedList(String tags){
+        LinkedList<String> result = new LinkedList<String>();
+        String[] tagsArray = tags.split("\\s*,\\s*");
+        for (int i = 0; i < tagsArray.length; i++) {
+            result.insert(tagsArray[i]);
+        }
+        return result;
+    }
+    
+    private static void printLLPhoto(LinkedList<Photo> list) {
+        if (list.empty()) return;
+
+        list.findFirst();
+        while (!list.last()) {
+            System.out.println(list.retrieve().getPath());
+            list.findNext();
+        }
+    System.out.println(list.retrieve().getPath());
+    }
+    
+    }
