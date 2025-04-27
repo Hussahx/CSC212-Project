@@ -1,4 +1,4 @@
-public class Test {
+public class Test2 {
     public static void main(String[] args) {
 
       Scanner in = new Scanner(system.in);
