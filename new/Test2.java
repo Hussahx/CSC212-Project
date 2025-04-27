@@ -22,7 +22,32 @@ public class Test {
         manager.addPhoto(photo5);
 
       System.out.println("Chhose a class:")
-        int ch = in.nextInt();
+        string ch = in.nextInt();
+
+switch(ch)
+
+    case album :
+
+
+
+    case manager:
+
+
+    case photo :
+
+
+
+    case photomanager:
+
+
+            
+    case invindexphotomanager:
+
+            
+
+
+
+
         
     }
 }
