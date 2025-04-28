@@ -31,6 +31,7 @@ public class Test2 {
         System.out.println("3- Inv Index Photo Manager");
         System.out.println("4- Album");
         System.out.println("5- Print All Content");
+        System.out.println("exit");
 
         ch = in.nextInt();
         in.nextLine();
@@ -107,6 +108,9 @@ public class Test2 {
                 printLLPhoto(album3.getPhotos());
                 break;
 
+                case 6:
+                System.out.println("Exiting program");
+                break;
             default:
                 System.out.println("Invalid choice!");
         }
