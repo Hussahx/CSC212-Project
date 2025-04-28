@@ -4,7 +4,7 @@ public class Test2 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-
+        int ch = -1;
         InvIndexPhotoManager invmanager = new InvIndexPhotoManager();
         PhotoManager manager = new PhotoManager();
 
@@ -24,7 +24,7 @@ public class Test2 {
         Album album2 = new Album("Album2", "animal AND grass", manager, invmanager);
         Album album3 = new Album("Album3", "", manager, invmanager);
 
-        
+        while (ch != 6) {
         System.out.println("\nChoose a class to test:");
         System.out.println("1- Photo");
         System.out.println("2- Photo Manager");
@@ -32,8 +32,8 @@ public class Test2 {
         System.out.println("4- Album");
         System.out.println("5- Print All Content");
 
-        int ch = in.nextInt();
-
+        ch = in.nextInt();
+        in.nextLine();
         switch (ch) {
 
             case 1:
@@ -112,7 +112,7 @@ public class Test2 {
         }
 
         System.out.println("\nProgram finished.");
-    }
+    }}
 
     private static LinkedList<String> toTagsLinkedList(String tags) {
         LinkedList<String> result = new LinkedList<>();
