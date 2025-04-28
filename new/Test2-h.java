@@ -31,7 +31,7 @@ public class Test2 {
         System.out.println("3- Inv Index Photo Manager");
         System.out.println("4- Album");
         System.out.println("5- Print All Content");
-        System.out.println("exit");
+        System.out.println("6-exit");
 
         ch = in.nextInt();
         in.nextLine();
